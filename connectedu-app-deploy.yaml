@@ -17,7 +17,7 @@ spec:
              - name: connecteduimgl1
                image: dockerkabap/connecteduimgl1:latest
                ports:
-                 - containerPort: 80
+                 - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +29,5 @@ spec:
    type: NodePort
    ports:
       - port: 3000
-        targetPort: 80
+        targetPort: 8080
         nodePort: 30000
