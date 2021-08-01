@@ -1,0 +1,23 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  labels: 
+    app: connecteduimgl1
+  name: connecteduimgl1-deployment
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app: connecteduimgl1
+  template: 
+    metadata: 
+      labels: 
+        app: connecteduimgl1
+    spec: 
+      containers: 
+        - 
+          image: "dockerkabap/connecteduimgl1:latest"
+          name: connecteduimgl1
+          ports: 
+            - containerPort: 80
